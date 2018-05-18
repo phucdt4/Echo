@@ -34,7 +34,7 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
       console.log(cordova.file.applicationDirectory);
-      alert(cordova.file.applicationDirectory);
+      //alert(cordova.file.applicationDirectory);
 		//$('#btn1').on('click', app.buttonHandler1);
 		//$('#btn2').on('click', app.buttonHandler2);
 		//$('#btn3').on('click', app.buttonHandler3);

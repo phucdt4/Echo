@@ -219,7 +219,7 @@ angular.module('ecoApp', ['ui.router','ecoApp.controllers','ngCookies','ngMessag
             templateUrl: 'templates/authentication/login.html',
             controller: 'loginController',
             onEnter: function ($rootScope) {
-              document.getElementById('navbar').style.display = 'none';
+              //document.getElementById('navbar').style.display = 'none';
               $rootScope.title = "Login";
               $rootScope.show = false;
               //changeLanguage(window.localStorage.getItem('lang'));
@@ -269,7 +269,7 @@ angular.module('ecoApp', ['ui.router','ecoApp.controllers','ngCookies','ngMessag
             templateUrl: 'templates/register.html',
             controller: 'registerController',
             onEnter: function ($rootScope) {
-              document.getElementById('navbar').style.display = 'none';
+              //document.getElementById('navbar').style.display = 'none';
                $rootScope.title = "Registration";
             }
         })
@@ -279,7 +279,7 @@ angular.module('ecoApp', ['ui.router','ecoApp.controllers','ngCookies','ngMessag
             templateUrl: 'templates/confirm.html',
             controller: 'confirmController',
             onEnter: function ($rootScope) {
-              document.getElementById('navbar').style.display = 'none';
+            //  document.getElementById('navbar').style.display = 'none';
                $rootScope.title = "Confirmation";
             }
         })
