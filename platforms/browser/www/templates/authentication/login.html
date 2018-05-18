@@ -1,0 +1,162 @@
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+<style>
+.fade.in {
+  opacity: 1;
+}
+
+#menu-top {
+     display: none;
+}
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.clearfix:before, .clearfix:after, .dl-horizontal dd:before, .dl-horizontal dd:after, .container:before, .container:after, .container-fluid:before, .container-fluid:after, .row:before, .row:after, .form-horizontal .form-group:before, .form-horizontal .form-group:after, .btn-toolbar:before, .btn-toolbar:after, .btn-group-vertical > .btn-group:before, .btn-group-vertical > .btn-group:after, .nav:before, .nav:after, .navbar:before, .navbar:after, .navbar-header:before, .navbar-header:after, .navbar-collapse:before, .navbar-collapse:after, .pager:before, .pager:after, .panel-body:before, .panel-body:after, .modal-header:before, .modal-header:after, .modal-footer:before, .modal-footer:after {
+    display: table;
+    content: initial;
+}
+
+.navbar .menu-title {
+    font-size: 20px;
+}
+
+.btn {
+    font-size: 20px;
+}
+
+.navbar-toggler {
+    font-size: 20px;
+}
+
+.dropup, .dropdown {
+    position: fixed;
+}
+
+</style>
+
+<div class="container-fluid">
+    <form class="form-horizontal" role="form" method="POST" action="/login">
+    	<div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <!--
+                    <div class="panel-heading text-center">
+                        <h3 class="panel-title">Login Page</h3>
+                    </div>
+                -->
+                    <div class="panel-body">
+                        <form role="form">
+                            <fieldset>
+                                <input oninput="checkPhonenumber()"  class="form-control" id="phonenumber" placeholder="Mobile Phone Number" name="phonenumber" ng-model="user.phonenumber" type="tel" autofocus required>
+                                <!-- Change this to a button or input when using this as a form -->
+                                <button type="submit" id="submit" ng-click="open($event,user.phonenumber)" class="btn btn-success btn-block">Continue</button>
+                                <p class="text-center">A message will be sent to you.</p>
+                                <uib-progressbar max="100" value="50" type="danger"><i>50 / 200</i></uib-progressbar>
+                                <input type="file"  name="fileField" id="fileinput" />
+                                <button onclick="uploadFiles()">Test</button>
+                                <input type="text" ng-model="selected" uib-typeahead="state for state in states | filter:$viewValue | limitTo:10" class="form-control">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </form>
+</div>
+    <script>
+      checkPhonenumber();
+
+      $("#fileinput").change(function(e) {
+          alert("test");
+          for (var i = 0; i < e.originalEvent.srcElement.files.length; i++) {
+
+              var file = e.originalEvent.srcElement.files[i];
+
+              var img = document.createElement("img");
+              var reader = new FileReader();
+              reader.onloadend = function() {
+                   img.src = reader.result;
+              }
+              reader.readAsDataURL(file);
+              $("input").after(img);
+          }
+      });
+
+      function checkPhonenumber()
+      {
+          //console.log($('#phonenumber').val());
+          //var isValid = $("#ContactForm1").valid();
+          if ($('#phonenumber').val().trim().length >= 8)
+          {
+              $("#submit").removeAttr('disabled');
+          }
+          else
+          {
+              $("#submit").attr('disabled','disabled');
+          }
+      }
+</script>
+<button onclick="getLocation()">Lấy vị trí</button>
+<button onclick="getImageTest()">Lấy hình ảnh</button>
+<p id="demo"></p>
+<img id='img'></img>
+<script>
+  var x = document.getElementById("demo");
+
+  function getLocation() {
+    if (navigator.geolocation) {
+      cordova.plugins.diagnostic.isGpsLocationEnabled(function(enabled){
+          alert(enabled);
+          if (!enabled){
+            cordova.plugins.diagnostic.switchToLocationSettings();
+            getLocation();
+          }
+          else {
+            var options = {
+              enableHighAccuracy: true,
+              timeout: 5000,
+              maximumAge: 0
+            };
+            navigator.geolocation.getCurrentPosition(onSuccess,onError,options);
+          }
+      }, function(error){
+          console.error("The following error occurred: "+error);
+      });
+    } else {
+      x.innerHTML = "Geolocation không được hỗ trợ bởi trình duyệt này.";
+    }
+  }
+
+  var onSuccess = function(position) {
+        alert('Latitude: '          + position.coords.latitude          + '\n' +
+              'Longitude: '         + position.coords.longitude         + '\n' +
+              'Altitude: '          + position.coords.altitude          + '\n' +
+              'Accuracy: '          + position.coords.accuracy          + '\n' +
+              'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+              'Heading: '           + position.coords.heading           + '\n' +
+              'Speed: '             + position.coords.speed             + '\n' +
+              'Timestamp: '         + position.timestamp                + '\n');
+        angular.element(document.getElementById('view')).scope().open(null,'123456');
+    };
+
+    // onError Callback receives a PositionError object
+    //
+    function onError(error) {
+        //Khi fail thi se show dialog để chọn mẫu đơn phù hợp
+        alert('code: '    + error.code    + '\n' +
+              'message: ' + error.message + '\n');
+    }
+/*
+  function showPosition(position) {
+    alert("11");
+    x.innerHTML = "Vĩ độ: " + position.coords.latitude +
+                  "<br>Kinh độ: " + position.coords.longitude;
+  }
+  */
+</script>

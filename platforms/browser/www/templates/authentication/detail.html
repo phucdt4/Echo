@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <form class="form-horizontal" role="form" method="POST" action="/login">
+    	<div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading text-center">
+                        <h3 class="panel-title">Login Page</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form role="form">
+                            <fieldset>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Confirmaton Code" name="code" type="text" autofocus>
+                                </div>
+                                <!-- Change this to a button or input when using this as a form -->
+                                <button type="button" ng-click="login()" class="btn btn-success btn-block">Login</button>
+                                <p>New Member? <a ui-sref="signup" class="">Sign up</a></p>
+                                <br>
+                                <p><a ui-sref="forgot" class="">Forgot Password?</a></p>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </form>
+</div>

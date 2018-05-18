@@ -1,0 +1,149 @@
+
+<!-- Begin page content -->
+<div class="container-fluid">
+    <div class="card full-screen-container filemenu_wrapper">
+      <div class="card-header">
+          <button class="btn btn-outline-primary pull-left filemenu_btn"><span class="fa fa-folder"></span></button>
+          <h6 class="m-1 d-inline-block">File Manager <small class=" text-muted">Click folder icon</small></h6>
+          <div class="btn-group more float-right">
+              <button type="button" class="btn btn-link"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i  class="fa fa-ellipsis-v"></i></button>
+              <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Share</a>
+                  <a class="dropdown-item" href="#">Move</a>
+                  <a class="dropdown-item" href="#">Delete</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-danger" href="#">Mail This</a>
+              </div>
+          </div>
+      </div>
+      <div class="card-body ">
+          <div class="search-bar relative" style="">
+              <div class="container-fluid">
+                  <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Search for file..." aria-label="Search for...">
+                      <span class="input-group-btn">
+                        <button class="btn btn-success" type="button">Go!</button>
+                      </span>
+                  </div>
+              </div>
+          </div>
+          <div class="filemenu ">
+              <div id="html1">
+                  <ul  data-jstree='{ "opened" : true }'>
+                      <li data-jstree='{"icon":"fa fa-desktop"}' >My Computer
+                        <ul>
+                            <li>Drive C: </li>
+                            <li>Drive D: </li>
+                            <li>Drive E: </li>
+                            <li>Drive F: </li>
+                        </ul>
+                      </li>
+                      <li data-jstree='{"icon":"fa fa-star text-warning"}' >My Favorite
+                        <ul>
+                              <li>Child node 1</li>
+                              <li><a href="#">Child node 2</a></li>
+                          </ul>
+                      </li>
+                      <li data-jstree='{"icon":"fa fa-leaf text-success"}'>Root node 1
+                          <ul>
+                            <li>Child node 1
+                                <ul>
+                                    <li data-jstree='{ "selected" : true }'>Child node 1.1</li>
+                                    <li>Child node 1.2</li>
+                                    <li>Child node 1.3</li>
+                                    <li>Child node 1.4</li>
+                                    <li>Child node 1.5</li>
+                                    <li><a href="#">Child node 1.6</a></li>
+                                  </ul>
+                            </li>
+                            <li>Child node 2</li>
+                            <li>Child node 3</li>
+                            <li>Child node 4</li>
+                            <li>Child node 5</li>
+                            <li><a href="#">Child node 6</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <div class="row m-0">
+              <div class="col-md-3 col-sm-4 col-6 text-center">
+                    <div class="file">
+                        <i class="fa fa-3x fa-file-pdf-o text-danger"></i>
+                        <h6 class="text-truncate mt-3">abcmaxartkiller.pdf</h6>
+                        <p>1.28 mb</p>
+                    </div>
+              </div>
+              <div class="col-md-3 col-sm-4 col-6 text-center">
+                    <div class="file">
+                        <i class="fa fa-3x fa-file-excel-o text-success"></i>
+                        <h6 class="text-truncate mt-3">abcmaxartkiller.xls</h6>
+                        <p>1.28 mb</p>
+                    </div>
+              </div>
+              <div class="col-md-3 col-sm-4 col-6 text-center">
+                    <div class="file">
+                        <i class="fa fa-3x fa-file-powerpoint-o text-danger"></i>
+                        <h6 class="text-truncate mt-3">abcmaxartkiller.ppt</h6>
+                        <p>1.28 mb</p>
+                    </div>
+              </div>
+              <div class="col-md-3 col-sm-4 col-6 text-center">
+                    <div class="file">
+                        <i class="fa fa-3x fa-file-code-o text-secondary"></i>
+                        <h6 class="text-truncate mt-3">abcmaxartkiller.cs</h6>
+                        <p>1.28 mb</p>
+                    </div>
+              </div>
+              <div class="col-md-3 col-sm-4 col-6 text-center">
+                    <div class="file">
+                        <i class="fa fa-3x fa-file-word-o text-primary"></i>
+                        <h6 class="text-truncate mt-3">abcmaxartkiller.doc</h6>
+                        <p>1.28 mb</p>
+                    </div>
+              </div>
+              <div class="col-md-3 col-sm-4 col-6 text-center">
+                    <div class="file">
+                        <i class="fa fa-3x fa-file-audio-o text-dark"></i>
+                        <h6 class="text-truncate mt-3">abcmaxartkiller.mp3</h6>
+                        <p>1.28 mb</p>
+                    </div>
+              </div>
+              <div class="col-md-3 col-sm-4 col-6 text-center">
+                    <div class="file">
+                        <i class="fa fa-3x fa-file-video-o text-info"></i>
+                        <h6 class="text-truncate mt-3">abcmaxartkiller.mp4</h6>
+                        <p>1.28 mb</p>
+                    </div>
+              </div>
+              <div class="col-md-3 col-sm-4 col-6 text-center">
+                    <div class="file">
+                        <i class="fa fa-3x fa-file-archive-o text-warning"></i>
+                        <h6 class="text-truncate mt-3">abcmaxartkiller.zip</h6>
+                        <p>1.28 mb</p>
+                    </div>
+              </div>
+          </div>
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item active"> <i class="mr-2 fa fa-folder text-light"></i> Explorer List view</li>
+              <li class="list-group-item"><a href="" class="text-dark"><i class="mr-2 fa fa-folder text-primary"></i>  my music<span class="ml-3 text-secondary">15 Files</span></a></li>
+              <li class="list-group-item"><a href="" class="text-dark"><i class="mr-2 fa fa-folder text-primary"></i>  maxam mobile 8<span class="ml-3 text-secondary">15 Files</span></a></li>
+              <li class="list-group-item"><a href="" class="text-dark"><i class="mr-2 fa fa-file-powerpoint-o text-danger"></i>  abcmaxartkiller.ppt <span class="ml-3 text-secondary">6.5 mb</span></a></li>
+              <li class="list-group-item"><a href="" class="text-dark"><i class="mr-2 fa fa-file-code-o text-secondary"></i>  bcmaxartkiller.cs <span class="ml-3 text-secondary">8.6 mb</span></a></li>
+              <li class="list-group-item"><a href="" class="text-dark"><i class="mr-2 fa fa-file-word-o text-primary"></i>  cmaxartkiller.doc <span class="ml-3 text-secondary">2.7 mb</span></a></li>
+              <li class="list-group-item"><a href="" class="text-dark"><i class="mr-2 fa fa-file-audio-o text-dark"></i>  dmaxartkiller.mp3 <span class="ml-3 text-secondary">1.3 mb</span></a></li>
+              <li class="list-group-item"><a href="" class="text-dark"><i class="mr-2 fa fa-file-video-o text-info"></i>  febcmaxartkiller.mp4 <span class="ml-3 text-secondary">4.5 mb</span></a></li>
+              <li class="list-group-item"><a href="" class="text-dark"><i class="mr-2 fa fa-file-archive-o text-warning"></i>  gbcmaxartkiller.zip <span class="ml-3 text-secondary">3.4 mb</span></a></li>
+              <li class="list-group-item"><a href="" class="text-dark"><i class="mr-2 fa fa-file-powerpoint-o text-danger"></i>  abcmaxartkiller.ppt <span class="ml-3 text-secondary">7.5 mb</span></a></li>
+              <li class="list-group-item"><a href="" class="text-dark"><i class="mr-2 fa fa-file-code-o text-secondary"></i>  bcmaxartkiller.cs <span class="ml-3 text-secondary">9.5 mb</span></a></li>
+              <li class="list-group-item"><a href="" class="text-dark"><i class="mr-2 fa fa-file-word-o text-primary"></i>  cmaxartkiller.doc <span class="ml-3 text-secondary">10.5 mb</span></a></li>
+              <li class="list-group-item"><a href="" class="text-dark"><i class="mr-2 fa fa-file-audio-o text-dark"></i>  dmaxartkiller.mp3 <span class="ml-3 text-secondary">1.3 mb</span></a></li>
+              <li class="list-group-item"><a href="" class="text-dark"><i class="mr-2 fa fa-file-video-o text-info"></i>  febcmaxartkiller.mp4 <span class="ml-3 text-secondary">1.9 mb</span></a></li>
+              <li class="list-group-item"><a href="" class="text-dark"><i class="mr-2 fa fa-file-archive-o text-warning"></i>  gbcmaxartkiller.zip <span class="ml-3 text-secondary">0.5 mb</span></a></li>
+          </ul>
+
+      </div>
+    </div>
+      <br>
+</div>
+<!-- End page content -->

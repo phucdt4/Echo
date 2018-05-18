@@ -1,0 +1,108 @@
+
+<div class="container-fluid">
+    <div class="col-md-12 text-center">
+       <i id="open_btn" class="fa fa-camera-retro fa-5x"></i>
+       <div id="output"></div>
+       <br>
+       <div class="custom-switch custom-switch-label-scanphoto">
+         <input class="custom-switch-input" checked  id="func" type="checkbox">
+         <label class="custom-switch-btn" for="func"></label>
+         <div class="custom-switch-content-checked">
+             <div class="btn-group">
+                 <button type="button" id="options" width="120px" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                   Option 1
+                </button>
+                <div class="dropdown-menu" width="120px" id="scanList">
+                  <a class="dropdown-item">Option 1</a>
+                  <a class="dropdown-item">Option 2</a>
+                  <a class="dropdown-item">Option 3</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item">Other</a>
+                </div>
+              </div>
+         </div>
+         <div class="custom-switch-content-unchecked">
+             <div class="btn-group">
+                 <button type="button" id="options2" width="120px" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                   Option 1
+                </button>
+                <div class="dropdown-menu" width="120px" id="photoList">
+                  <a class="dropdown-item">Option 1</a>
+                  <a class="dropdown-item">Option 2</a>
+                  <a class="dropdown-item">Option 3</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item">Other</a>
+                </div>
+              </div>
+         </div>
+       </div>
+   </div>
+</div>
+
+<script>
+
+$("#open_btn").click(function() {
+    $.FileDialog({
+        // MIME type of accepted files, e. g. image/jpeg
+        accept: "image/jpeg,image/png",
+
+        // cancel button
+        cancel_button: "Cancel",
+
+        // drop zone message
+        drag_message: "Drop files here",
+
+        // the height of drop zone in pixels
+        dropheight: 400,
+
+        // error message
+        error_message: "An error occured while loading file",
+
+        // whether it is possible to choose multiple files or not.
+        multiple: true,
+
+        // OK button
+        ok_button: "Upload",
+
+        // file reading mode.
+        // BinaryString, Text, DataURL, ArrayBuffer
+        readAs: "DataURL",
+
+        // remove message
+        remove_message: "Remove&nbsp;file",
+
+        // file dialog title
+        title: "Upload Photo(s)"
+
+    }).on('files.bs.filedialog', function(ev) {
+        console.log(ev);
+        var files = ev.files;
+        var text = "";
+        files.forEach(function(f) {
+            text += f.name + "<br/>";
+        });
+        console.log(files);
+
+        //$("#output").html(text);
+    }).on('cancel.bs.filedialog', function(ev) {
+        //$("#output").html("Cancelled!");
+    });
+});
+$(function(){
+
+   $("#scanList a").click(function(){
+
+     $("#options").text($(this).text());
+     $("#options").val($(this).text());
+
+  });
+
+  $("#photoList a").click(function(){
+
+    $("#options2").text($(this).text());
+    $("#options2").val($(this).text());
+
+ });
+
+});
+</script>

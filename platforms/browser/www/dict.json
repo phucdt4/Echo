@@ -1,0 +1,222 @@
+{
+    "name":["HỌTÊN","HỌ TÊN","HOTEN","HO TEN","HỌVÀTÊN","HỌ VÀ TÊN","HOVATEN","HO VA TEN",
+            "HỌ VÀTÊN","HỌ VÀTÊN","HO VATEN","HO VATEN","HỌVÀ TÊN","HỌVÀ TÊN","HOVA TEN","HOVA TEN",
+            "FULLNAME","FULL NAME","HỌ TÊN NGƯỜI BỆNH","HỌTÊNNGƯỜIBỆNH","HỌTÊN NGƯỜIBỆNH","HỌTÊNNGƯỜI BỆNH",
+            "HỌTÊN NGƯỜI BỆNH","HỌ TÊNNGƯỜI BỆNH","HỌ TÊNNGƯỜIBỆNH","HỌTÊNNGƯỜI BỆNH","BỆNH NHÂN","BỆNHNHÂN",
+            "TÊN BỆNH NHÂN","TÊNBỆNHNHÂN","TÊN BỆNHNHÂN","TÊNBỆNH NHÂN",
+            "ÔNG/BÀ","ÔNG,BÀ","ÔNG /BÀ","ÔNG/ BÀ"],
+    "yearofbirth":["NĂM SINH","NĂMSINH","NAMSINH","NAM SINH","YEAROFBIRTH","YEAR OF BIRTH",
+                   "YEAR OFBIRTH","YEAROF BIRTH"],
+    "dateofbirth":["NGÀY SINH","NGÀYSINH","NGAYSINH","NGAY SINH",
+                   "DATEOFBIRTH","DATE OF BIRTH","DATEOF BIRTH","DATE OFBIRTH"],
+    "age":["TUỔI","AGE"],
+    "sex": ["SEX","GIỚI TÍNH","GIỚITÍNH"],
+    "ngaytaikham":["NGÀYTÁIKHÁM","NGÀY TÁI KHÁM","NGÀY TÁIKHÁM","NGÀYTÁI KHÁM","TÁIKHÁM","TÁI KHÁM"],
+    "ngaykham":["NGÀY","NGÀY KHÁM","NGÀYKHÁM","NGAY KHAM","NGAYKHAM","NGÀYIN","NGÀY IN","THỜIGIANIN","THỜI GIANIN","THỜIGIAN IN","THỜI GIAN IN","TG IN","TGIN","T/GIN","T/G IN","PRINTDATE","PRINT DATE"],
+    "donthuoc":["ĐƠNTHUỐC","ĐƠN THUỐC","TOATHUỐC","TOA THUỐC"],
+    "chandoan": ["CHẨN ĐOÁN","CHẨNĐOÁN"],
+    "tieudethuoc": ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"
+                   ,"1.","2.","3.","4.","5.","6.","7.","8.","9.","10.","11.","12.","13.","14.","15.","16.","17.","18.","19.","20."
+                   ,"1/","2/","3/","4/","5/","6/","7/","8/","9/","10/","11/","12/","13/","14/","15/","16/","17/","18/","19/","20/"],
+    "components":[
+        {
+            "id": "RBC",
+            "pattern": ["RBC"],
+            "low": 3.8,
+            "high": 5.5,
+            "type": "number"
+        },
+        {
+            "id": "HGB",
+            "pattern": ["HGB"],
+            "low": 120,
+            "high": 170,
+            "type": "number"
+        },
+        {
+            "id": "HCT",
+            "pattern": ["HCT"],
+            "low": 34,
+            "high": 50,
+            "type": "number"
+        },
+        {
+            "id": "MCV",
+            "pattern": ["MCV"],
+            "low": 78,
+            "high": 100,
+            "type": "number"
+        },
+        {
+            "id": "MCH",
+            "pattern": ["MCH"],
+            "low": 24,
+            "high": 33,
+            "type": "number"
+        },
+        {
+            "id": "MCHC",
+            "pattern": ["MCHC"],
+            "low": 315,
+            "high": 355,
+            "type": "number"
+        },
+        {
+            "id": "WBC",
+            "pattern": ["WBC"],
+            "low": 4,
+            "high": 11,
+            "type": "number"
+        },
+        {
+            "id": "%NEU",
+            "pattern": ["%NEU"],
+            "low": 45,
+            "high": 75,
+            "type": "number"
+        },
+        {
+            "id": "NEU#",
+            "pattern": ["NEU#"],
+            "type": "number"
+        },
+        {
+            "id": "%LYM",
+            "pattern": ["%LYM"],
+            "low": 20,
+            "high": 40,
+            "type": "number"
+        },
+        {
+            "id": "LYM#",
+            "pattern": ["LYM#"],
+            "type": "number"
+        },
+        {
+            "id": "%MONO",
+            "pattern": ["%MONO"],
+            "low": 4,
+            "high": 10,
+            "type": "number"
+        },
+        {
+            "id": "MONO#",
+            "pattern": ["MONO#"],
+            "type": "number"
+        },
+        {
+            "id": "%EOS",
+            "pattern": ["%EOS"],
+            "low": 2,
+            "high": 8,
+            "type": "number"
+        },
+        {
+            "id": "EOS#",
+            "pattern": ["EOS#"],
+            "type": "number"
+        },
+        {
+            "id": "%BASO",
+            "pattern": ["%BASO"],
+            "low": 0,
+            "high": 2,
+            "type": "number"
+        },
+        {
+            "id": "BASO#",
+            "pattern": ["BASO#"],
+            "type": "number"
+        },
+        {
+            "id": "PLT",
+            "pattern": ["PLT"],
+            "low": 200,
+            "high": 400,
+            "type": "number"
+        },
+        {
+            "id": "MPV",
+            "pattern": ["MPV"],
+            "low": 7,
+            "high": 12,
+            "type": "number"
+        },
+        {
+            "id": "RBC_MORPH",
+            "pattern": ["RBC MORPH"],
+            "type": "character"
+        },
+        {
+            "id": "B.U.N",
+            "pattern": ["B.U.N"],
+            "low": 7,
+            "high": 20,
+            "type": "number"
+        },
+        {
+            "id": "CREATININ",
+            "pattern": ["CREATININ"],
+            "low": 0.7,
+            "high": 1.5,
+            "type": "number"
+        },
+        {
+            "id": "EGFR_(MDRD)",
+            "pattern": ["EGFR (MDRD)"],
+            "type": "number"
+        },
+        {
+            "id": "NA+",
+            "pattern": ["NA+"],
+            "low": 135,
+            "high": 150,
+            "type": "number"
+        },
+        {
+            "id": "K+",
+            "pattern": ["K+"],
+            "low": 3.5,
+            "high": 5.5,
+            "type": "number"
+        },
+        {
+            "id": "CL-",
+            "pattern": ["CL-"],
+            "low": 98,
+            "high": 106,
+            "type": "number"
+        },
+        {
+            "id": "CA_TP",
+            "pattern": ["CA TP"],
+            "low": 2.2,
+            "high": 2.6,
+            "type": "number"
+        },
+        {
+            "id": "PH",
+            "pattern": ["PH"],
+            "low": 5,
+            "high": 8,
+            "type": "number"
+        },
+        {
+            "id": "S.G",
+            "pattern": ["S.G"],
+            "low": 1.003,
+            "high": 1.030,
+            "type": "number"
+        },
+        {
+            "id": "GLUCOSE",
+            "pattern": ["GLUCOSE"],
+            "type": "character"
+        },
+        {
+            "id": "PROTEIN_NT",
+            "pattern": ["PROTEIN NT"],
+            "type": "character"
+        }
+    ]
+}

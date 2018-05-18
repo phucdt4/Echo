@@ -1,0 +1,63 @@
+
+<div class="modal-header">
+  <h4 class="modal-title">{{item2.name}}</h4>
+  <button type="button" class="close"  ng-click="close()" data-dismiss="modal">&times;</button>
+</div>
+
+<div class="modal-body">
+    <form class="form-horizontal" role="form">
+    <div class="form-group">
+
+       <label class="control-label col-sm-2" for="standard">Chuẩn</label>
+      <div class="col-sm-10">
+        <input type="date" readonly class="form-control" ng-model="item2.standard" id="standard">
+      </div>
+    </div>
+    <div class="form-group" ng-show="showdate">
+      <label class="control-label col-sm-2" for="date">Date</label>
+      <div class="col-sm-10">
+        <input type="date" class="form-control" ng-model="item2.date" id="date">
+      </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-10">
+            <div class="checkbox">
+                <label>
+                    <input id="done" type="checkbox" ng-model="showdate"/>Done
+                </label>
+            </div>
+        </div>
+    <!--
+      <label for="Done" class="control-label col-sm-2" for="inputDone">Done</label>
+      <div class="col-sm-10">
+           <input id="inputDone" type="checkbox" ng-model="showdate"/>
+      </div>
+  -->
+    </div>
+
+    <div id="demo" class="collapse">
+      {{item2.info}}
+    </div>
+    </form>
+</div>
+ <div class="modal-footer">
+  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Detail</button>
+  <button type="submit" ng-click="ok()" class="btn btn-success">Submit</button>
+  <button type="button" ng-click="close()" class="btn btn-danger" data-dismiss="modal">Close</button>
+</div>
+
+<style>
+.modal-body .form-horizontal .col-sm-2,
+.modal-body .form-horizontal .col-sm-10 {
+    width: 100%
+}
+
+.modal-body .form-horizontal .control-label {
+    text-align: left;
+}
+
+.col-sm-10 {
+    max-width: 100%;
+}
+
+</style>

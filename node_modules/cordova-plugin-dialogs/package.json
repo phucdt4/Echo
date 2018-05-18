@@ -1,0 +1,110 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "git+https://github.com/revolunet/cordova-plugin-dialogs.git",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "git+https://github.com/revolunet/cordova-plugin-dialogs.git",
+        "spec": "git+https://github.com/revolunet/cordova-plugin-dialogs.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:revolunet/cordova-plugin-dialogs.git",
+          "sshUrl": "git+ssh://git@github.com/revolunet/cordova-plugin-dialogs.git",
+          "httpsUrl": "git+https://github.com/revolunet/cordova-plugin-dialogs.git",
+          "gitUrl": "git://github.com/revolunet/cordova-plugin-dialogs.git",
+          "shortcut": "github:revolunet/cordova-plugin-dialogs",
+          "directUrl": "https://raw.githubusercontent.com/revolunet/cordova-plugin-dialogs/master/package.json"
+        }
+      },
+      "G:\\EcoNew"
+    ]
+  ],
+  "_from": "git+https://github.com/revolunet/cordova-plugin-dialogs.git",
+  "_id": "cordova-plugin-dialogs@1.1.2-dev",
+  "_inCache": true,
+  "_location": "/cordova-plugin-dialogs",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "git+https://github.com/revolunet/cordova-plugin-dialogs.git",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "git+https://github.com/revolunet/cordova-plugin-dialogs.git",
+    "spec": "git+https://github.com/revolunet/cordova-plugin-dialogs.git",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:revolunet/cordova-plugin-dialogs.git",
+      "sshUrl": "git+ssh://git@github.com/revolunet/cordova-plugin-dialogs.git",
+      "httpsUrl": "git+https://github.com/revolunet/cordova-plugin-dialogs.git",
+      "gitUrl": "git://github.com/revolunet/cordova-plugin-dialogs.git",
+      "shortcut": "github:revolunet/cordova-plugin-dialogs",
+      "directUrl": "https://raw.githubusercontent.com/revolunet/cordova-plugin-dialogs/master/package.json"
+    }
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/revolunet/cordova-plugin-dialogs.git#fb994515f0b8ff054482ebd5740964204c17c3b3",
+  "_shasum": "1bec31e8e718b4d1031e1062bf3e9914d158b7d2",
+  "_shrinkwrap": null,
+  "_spec": "git+https://github.com/revolunet/cordova-plugin-dialogs.git",
+  "_where": "G:\\EcoNew",
+  "author": {
+    "name": "Apache Software Foundation"
+  },
+  "bugs": {
+    "url": "https://github.com/apache/cordova-plugin-dialogs/issues"
+  },
+  "cordova": {
+    "id": "cordova-plugin-dialogs",
+    "platforms": [
+      "firefoxos",
+      "android",
+      "browser",
+      "amazon-fireos",
+      "ubuntu",
+      "ios",
+      "blackberry10",
+      "wp7",
+      "wp8",
+      "windows8",
+      "windows"
+    ]
+  },
+  "dependencies": {},
+  "description": "Cordova Notification Plugin",
+  "devDependencies": {},
+  "gitHead": "fb994515f0b8ff054482ebd5740964204c17c3b3",
+  "homepage": "https://github.com/apache/cordova-plugin-dialogs#readme",
+  "keywords": [
+    "cordova",
+    "notification",
+    "ecosystem:cordova",
+    "cordova-firefoxos",
+    "cordova-android",
+    "cordova-browser",
+    "cordova-amazon-fireos",
+    "cordova-ubuntu",
+    "cordova-ios",
+    "cordova-blackberry10",
+    "cordova-wp7",
+    "cordova-wp8",
+    "cordova-windows8",
+    "cordova-windows"
+  ],
+  "license": "Apache 2.0",
+  "name": "cordova-plugin-dialogs",
+  "optionalDependencies": {},
+  "readme": "<!--\r\n# license: Licensed to the Apache Software Foundation (ASF) under one\r\n#         or more contributor license agreements.  See the NOTICE file\r\n#         distributed with this work for additional information\r\n#         regarding copyright ownership.  The ASF licenses this file\r\n#         to you under the Apache License, Version 2.0 (the\r\n#         \"License\"); you may not use this file except in compliance\r\n#         with the License.  You may obtain a copy of the License at\r\n#\r\n#           http://www.apache.org/licenses/LICENSE-2.0\r\n#\r\n#         Unless required by applicable law or agreed to in writing,\r\n#         software distributed under the License is distributed on an\r\n#         \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\r\n#         KIND, either express or implied.  See the License for the\r\n#         specific language governing permissions and limitations\r\n#         under the License.\r\n-->\r\n\r\n# cordova-plugin-dialogs\r\n\r\nThis plugin provides access to some native dialog UI elements\r\nvia a global `navigator.notification` object.\r\n\r\nAlthough the object is attached to the global scoped `navigator`, it is not available until after the `deviceready` event.\r\n\r\n    document.addEventListener(\"deviceready\", onDeviceReady, false);\r\n    function onDeviceReady() {\r\n        console.log(navigator.notification);\r\n    }\r\n\r\n## Installation\r\n\r\n    cordova plugin add cordova-plugin-dialogs\r\n\r\n## Methods\r\n\r\n- `navigator.notification.alert`\r\n- `navigator.notification.confirm`\r\n- `navigator.notification.prompt`\r\n- `navigator.notification.beep`\r\n\r\n## navigator.notification.alert\r\n\r\nShows a custom alert or dialog box.  Most Cordova implementations use a native\r\ndialog box for this feature, but some platforms use the browser's `alert`\r\nfunction, which is typically less customizable.\r\n\r\n    navigator.notification.alert(message, alertCallback, [title], [buttonName])\r\n\r\n- __message__: Dialog message. _(String)_\r\n\r\n- __alertCallback__: Callback to invoke when alert dialog is dismissed. _(Function)_\r\n\r\n- __title__: Dialog title. _(String)_ (Optional, defaults to `Alert`)\r\n\r\n- __buttonName__: Button name. _(String)_ (Optional, defaults to `OK`)\r\n\r\n\r\n### Example\r\n\r\n    function alertDismissed() {\r\n        // do something\r\n    }\r\n\r\n    navigator.notification.alert(\r\n        'You are the winner!',  // message\r\n        alertDismissed,         // callback\r\n        'Game Over',            // title\r\n        'Done'                  // buttonName\r\n    );\r\n\r\n### Supported Platforms\r\n\r\n- Amazon Fire OS\r\n- Android\r\n- BlackBerry 10\r\n- Firefox OS\r\n- iOS\r\n- Tizen\r\n- Windows Phone 7 and 8\r\n- Windows 8\r\n- Windows\r\n\r\n### Windows Phone 7 and 8 Quirks\r\n\r\n- There is no built-in browser alert, but you can bind one as follows to call `alert()` in the global scope:\r\n\r\n        window.alert = navigator.notification.alert;\r\n\r\n- Both `alert` and `confirm` are non-blocking calls, results of which are only available asynchronously.\r\n\r\n### Firefox OS Quirks:\r\n\r\nBoth native-blocking `window.alert()` and non-blocking `navigator.notification.alert()` are available.\r\n\r\n### BlackBerry 10 Quirks\r\n`navigator.notification.alert('text', callback, 'title', 'text')` callback parameter is passed the number 1.\r\n\r\n## navigator.notification.confirm\r\n\r\nDisplays a customizable confirmation dialog box.\r\n\r\n    navigator.notification.confirm(message, confirmCallback, [title], [buttonLabels])\r\n\r\n- __message__: Dialog message. _(String)_\r\n\r\n- __confirmCallback__: Callback to invoke with index of button pressed (1, 2, or 3) or when the dialog is dismissed without a button press (0). _(Function)_\r\n\r\n- __title__: Dialog title. _(String)_ (Optional, defaults to `Confirm`)\r\n\r\n- __buttonLabels__: Array of strings specifying button labels. _(Array)_  (Optional, defaults to [`OK,Cancel`])\r\n\r\n\r\n### confirmCallback\r\n\r\nThe `confirmCallback` executes when the user presses one of the\r\nbuttons in the confirmation dialog box.\r\n\r\nThe callback takes the argument `buttonIndex` _(Number)_, which is the\r\nindex of the pressed button. Note that the index uses one-based\r\nindexing, so the value is `1`, `2`, `3`, etc.\r\n\r\n### Example\r\n\r\n    function onConfirm(buttonIndex) {\r\n        alert('You selected button ' + buttonIndex);\r\n    }\r\n\r\n    navigator.notification.confirm(\r\n        'You are the winner!', // message\r\n         onConfirm,            // callback to invoke with index of button pressed\r\n        'Game Over',           // title\r\n        ['Restart','Exit']     // buttonLabels\r\n    );\r\n\r\n### Supported Platforms\r\n\r\n- Amazon Fire OS\r\n- Android\r\n- BlackBerry 10\r\n- Firefox OS\r\n- iOS\r\n- Tizen\r\n- Windows Phone 7 and 8\r\n- Windows 8\r\n- Windows\r\n\r\n### Windows Phone 7 and 8 Quirks\r\n\r\n- There is no built-in browser function for `window.confirm`, but you can bind it by assigning:\r\n\r\n        window.confirm = navigator.notification.confirm;\r\n\r\n- Calls to `alert` and `confirm` are non-blocking, so the result is only available asynchronously.\r\n\r\n### Windows Quirks\r\n\r\n- On Windows8/8.1 it is not possible to add more than three buttons to MessageDialog instance.\r\n\r\n- On Windows Phone 8.1 it's not possible to show dialog with more than two buttons.\r\n\r\n### Firefox OS Quirks:\r\n\r\nBoth native-blocking `window.confirm()` and non-blocking `navigator.notification.confirm()` are available.\r\n\r\n## navigator.notification.prompt\r\n\r\nDisplays a native dialog box that is more customizable than the browser's `prompt` function.\r\n\r\n    navigator.notification.prompt(message, promptCallback, [title], [buttonLabels], [defaultText])\r\n\r\n- __message__: Dialog message. _(String)_\r\n\r\n- __promptCallback__: Callback to invoke with index of button pressed (1, 2, or 3) or when the dialog is dismissed without a button press (0). _(Function)_\r\n\r\n- __title__: Dialog title _(String)_ (Optional, defaults to `Prompt`)\r\n\r\n- __buttonLabels__: Array of strings specifying button labels _(Array)_ (Optional, defaults to `[\"OK\",\"Cancel\"]`)\r\n\r\n- __defaultText__: Default textbox input value (`String`) (Optional, Default: empty string)\r\n\r\n### promptCallback\r\n\r\nThe `promptCallback` executes when the user presses one of the buttons\r\nin the prompt dialog box. The `results` object passed to the callback\r\ncontains the following properties:\r\n\r\n- __buttonIndex__: The index of the pressed button. _(Number)_ Note that the index uses one-based indexing, so the value is `1`, `2`, `3`, etc.\r\n\r\n\r\n\r\n- __input1__: The text entered in the prompt dialog box. _(String)_\r\n\r\n### Example\r\n\r\n    function onPrompt(results) {\r\n        alert(\"You selected button number \" + results.buttonIndex + \" and entered \" + results.input1);\r\n    }\r\n\r\n    navigator.notification.prompt(\r\n        'Please enter your name',  // message\r\n        onPrompt,                  // callback to invoke\r\n        'Registration',            // title\r\n        ['Ok','Exit'],             // buttonLabels\r\n        'Jane Doe'                 // defaultText\r\n    );\r\n\r\n### Supported Platforms\r\n\r\n- Amazon Fire OS\r\n- Android\r\n- Firefox OS\r\n- iOS\r\n- Windows Phone 7 and 8\r\n- Windows 8\r\n- Windows\r\n\r\n### Android Quirks\r\n\r\n- Android supports a maximum of three buttons, and ignores any more than that.\r\n\r\n- On Android 3.0 and later, buttons are displayed in reverse order for devices that use the Holo theme.\r\n\r\n### Windows Quirks\r\n\r\n- On Windows prompt dialog is html-based due to lack of such native api.\r\n\r\n### Firefox OS Quirks:\r\n\r\nBoth native-blocking `window.prompt()` and non-blocking `navigator.notification.prompt()` are available.\r\n\r\n## navigator.notification.beep\r\n\r\nThe device plays a beep sound.\r\n\r\n    navigator.notification.beep(times);\r\n\r\n- __times__: The number of times to repeat the beep. _(Number)_\r\n\r\n### Example\r\n\r\n    // Beep twice!\r\n    navigator.notification.beep(2);\r\n\r\n### Supported Platforms\r\n\r\n- Amazon Fire OS\r\n- Android\r\n- BlackBerry 10\r\n- iOS\r\n- Tizen\r\n- Windows Phone 7 and 8\r\n- Windows 8\r\n\r\n### Amazon Fire OS Quirks\r\n\r\n- Amazon Fire OS plays the default __Notification Sound__ specified under the __Settings/Display & Sound__ panel.\r\n\r\n### Android Quirks\r\n\r\n- Android plays the default __Notification ringtone__ specified under the __Settings/Sound & Display__ panel.\r\n\r\n### Windows Phone 7 and 8 Quirks\r\n\r\n- Relies on a generic beep file from the Cordova distribution.\r\n\r\n### Tizen Quirks\r\n\r\n- Tizen implements beeps by playing an audio file via the media API.\r\n\r\n- The beep file must be short, must be located in a `sounds` subdirectory of the application's root directory, and must be named `beep.wav`.\r\n\r\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apache/cordova-plugin-dialogs.git"
+  },
+  "version": "1.1.2-dev"
+}

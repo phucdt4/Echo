@@ -1,0 +1,41 @@
+<div class="container-fluid">
+    <form class="form-horizontal" role="form" method="POST" action="/login">
+    	<div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading text-center">
+                        <h3 class="panel-title">
+                            A message will be sent to
+                            <br>
+                            {{phonenumber}}
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <form role="form">
+                            <fieldset>
+                                <div class="form-group">
+                                    <input class="form-control" ng-model="confirmationCode" placeholder="Confirmation Code" name="code" type="tesxr" autofocus>
+                                </div>
+                                <!-- Change this to a button or input when using this as a form -->
+                                <button type="button" ng-click="confirm()" class="btn btn-success btn-block">Continue</button>
+                                <br>
+                                <div class="row text-center">
+                                    <div class="col-md-12">
+                                        Do not receive a confirmation code?
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button type="button" ng-click="resend()" class="btn btn-info btn-block">Resend</button>
+                                    <button type="button" ng-click="changedialog()" class="btn btn-warning btn-block">Change Number</button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+
+    </form>
+</div>

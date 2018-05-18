@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-forcenetwork" xmlns:android="http://schemas.android.com/apk/res/android" version="1.1.0">
+
+    <name>cordova-plugin-forcenetwork</name>
+    <description>Force user to switch-on its internet connection</description>
+    <license>MIT</license>
+    <repo>https://github.com/Synchronized-TV/cordova-plugin-forcenetwork.git</repo>
+
+    <dependency id="cordova-plugin-network-information"/>
+    <dependency id="cordova-plugin-dialogs" url="https://github.com/revolunet/cordova-plugin-dialogs" commit="c70eb82adc8d11889ab47c01a686f692f60b1623"/>
+
+    <js-module src="www/ForceNetwork.js" name="ForceNetwork">
+        <clobbers target="cordova.plugins.ForceNetwork"/>
+    </js-module>
+
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="CDVForceNetwork">
+                <param name="ios-package" value="CDVForceNetwork" />
+            </feature>
+        </config-file>
+        <config-file target="*-Info.plist" parent="CFBundleURLTypes">
+          <array>
+            <dict>
+              <key>CFBundleTypeRole</key>
+              <string>Editor</string>
+              <key>CFBundleURLName</key>
+              <string>prefs</string>
+              <key>CFBundleURLSchemes</key>
+              <array>
+                <string>prefs</string>
+              </array>
+            </dict>
+          </array>
+        </config-file>
+
+        <header-file src="src/ios/CDVForceNetwork.h" />
+        <source-file src="src/ios/CDVForceNetwork.m" />
+
+        <framework src="SystemConfiguration.framework"/>
+
+    </platform>
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="CDVForceNetwork">
+                <param name="android-package" value="tv.s10d.cordova.forcenetwork.CDVForceNetwork"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/CDVForceNetwork.java" target-dir="src/tv/s10d/cordova/forcenetwork" />
+    </platform>
+
+</plugin>

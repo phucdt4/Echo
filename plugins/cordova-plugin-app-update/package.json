@@ -1,0 +1,103 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-app-update",
+        "scope": null,
+        "escapedName": "cordova-plugin-app-update",
+        "name": "cordova-plugin-app-update",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "G:\\EcoNew"
+    ]
+  ],
+  "_from": "cordova-plugin-app-update@latest",
+  "_id": "cordova-plugin-app-update@1.5.2",
+  "_inCache": true,
+  "_location": "/cordova-plugin-app-update",
+  "_nodeVersion": "8.5.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/cordova-plugin-app-update-1.5.2.tgz_1516970980378_0.6534978598356247"
+  },
+  "_npmUser": {
+    "name": "vaenow",
+    "email": "luowenbiz@gmail.com"
+  },
+  "_npmVersion": "5.3.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-plugin-app-update",
+    "scope": null,
+    "escapedName": "cordova-plugin-app-update",
+    "name": "cordova-plugin-app-update",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-app-update/-/cordova-plugin-app-update-1.5.2.tgz",
+  "_shasum": "12c8d7789e550a130dffe4a16267dae5e90522b6",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-app-update",
+  "_where": "G:\\EcoNew",
+  "author": {
+    "name": "vaenow"
+  },
+  "bugs": {
+    "url": "https://github.com/vaenow/cordova-plugin-app-update/issues"
+  },
+  "cordova": {
+    "id": "cordova-plugin-app-update",
+    "platforms": [
+      "android"
+    ]
+  },
+  "dependencies": {},
+  "description": "Cordova App Update",
+  "devDependencies": {
+    "jshint": "^2.6.0"
+  },
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-gaOzWN5mTSpk1qpqp51eoGkOYt0uA3OVIucKiUVoK88QwOEIzxWcOJuMvYflZqvmUlkJM6mL7TOT8SbyZYKRNA==",
+    "shasum": "12c8d7789e550a130dffe4a16267dae5e90522b6",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-app-update/-/cordova-plugin-app-update-1.5.2.tgz"
+  },
+  "gitHead": "740103f6f36afc269300ef237e7cf083544efa5d",
+  "homepage": "https://github.com/vaenow/cordova-plugin-app-update#readme",
+  "keywords": [
+    "cordova",
+    "app",
+    "auto",
+    "update",
+    "updater",
+    "dynamic",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "vaenow",
+      "email": "luowenbiz@gmail.com"
+    }
+  ],
+  "name": "cordova-plugin-app-update",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vaenow/cordova-plugin-app-update.git"
+  },
+  "scripts": {
+    "jshint": "node node_modules/jshint/bin/jshint www && node node_modules/jshint/bin/jshint src && node node_modules/jshint/bin/jshint tests",
+    "test": "npm run jshint"
+  },
+  "version": "1.5.2"
+}

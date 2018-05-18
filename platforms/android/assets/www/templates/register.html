@@ -1,0 +1,101 @@
+<!-- Begin page content -->
+<div class="container-fluid">
+    <br>
+    <h3 class="text-center">Welcome,<br>
+        <span class="text-primary">Register Here!</span>
+    </h3>
+    <form name="myform" class="card signin" novalidate>
+        <div class="card-body">
+                <div class="form-group required" ng-class="{ 'has-error': myform.username.$touched && myform.username.$invalid }">
+                    <label class="control-label">Username</label>
+                    <input type="text" class="form-control" name="username" ng-model="username" id="username" ng-minlength="3" ng-maxlength="8" required placeholder="Enter Username">
+                    <div class="help-block" ng-messages="myform.username.$error" ng-if="submitted || myform.username.$touched || myForm.username.$dirty">
+                        <p ng-message="minlength">Your username is too short.</p>
+                        <p ng-message="maxlength">Your username is too long.</p>
+                        <p ng-message="required">Your username is required.</p>
+                    </div>
+                </div>
+                <div class="form-group" ng-class="{ 'has-error': myform.password.$touched && myform.password.$invalid }">
+                    <label for="password">Password (*)</label>
+                    <input type="password" class="form-control" name="password" ng-model="password"  id="password"  ng-minlength="8" ng-maxlength="20" required placeholder="Enter Password">
+                    <div class="help-block" ng-messages="myform.password.$error" ng-if="submitted || myform.password.$touched || myForm.password.$dirty">
+                        <p ng-message="minlength">Your password is too short.</p>
+                        <p ng-message="maxlength">Your password is too long.</p>
+                        <p ng-message="required">Your password is required.</p>
+                    </div>
+                </div>
+                <div class="form-group" ng-class="{ 'has-error': myform.password_c.$touched && myform.password_c.$invalid }">
+                    <label>Confirm Password (*)</label>
+                    <input type="password" class="form-control" name="password_c" ng-model="password_c" ng-pattern="{{password}}" required  id="password_c" placeholder="Enter Confirm Password">
+                    <div class="help-block" ng-messages="myform.password_c.$error" ng-if="submitted || myform.password_c.$touched || myForm.password_c.$dirty">
+                        <p ng-message="required">Confirmation is required.</p>
+                        <p ng-message="pattern">Not match.</p>
+                    </div>
+                </div>
+                <div class="form-group" ng-class="{ 'has-error': myform.name.$touched && myform.name.$invalid }">
+                  <label>Name (*)</label>
+                  <input type="text" class="form-control" name="name" ng-model="name" ng-minlength="3" ng-maxlength="8" required id="name" placeholder="Name">
+                  <div class="help-block" ng-messages="myform.name.$error" ng-if="submitted || myform.name.$touched || myForm.name.$dirty">
+                      <p ng-message="minlength">Your name is too short.</p>
+                      <p ng-message="maxlength">Your name is too long.</p>
+                      <p ng-message="required">Your name is required.</p>
+                  </div>
+                </div>
+                <div class="form-group">
+                    <label>Date Of Birth (*)</label>
+                    <input type="date" class="form-control" name="birthday" id="birthday" placeholder="Enter Date Of Birth" required>
+                </div>
+                <div class="form-group" ng-class="{ 'has-error': myform.email.$touched && myform.email.$invalid }">
+                  <label>Email (*)</label>
+                  <input type="email" class="form-control" name="email" ng-model="email" required placeholder="Enter email">
+                  <div class="help-block" ng-messages="myform.email.$error" ng-if="submitted || myform.email.$touched || myForm.email.$dirty">
+                      <p ng-message="email">Please enter a valid email address.</p>
+                      <p ng-message="required">Your email is required.</p>
+                  </div>
+                </div>
+                <div class="form-group" ng-class="{ 'has-error': myform.email.$touched && myform.email.$invalid }">
+                  <label>Address</label>
+                  <input type="text" class="form-control" ng-model="address" id="address" placeholder="Enter address">
+                </div>
+                <div class="form-group" ng-class="{ 'has-error': myform.email.$touched && myform.email.$invalid }">
+                  <label>Phone Number</label>
+                  <input type="number" class="form-control" name="phone" ng-model="phone" ng-pattern="/^(\+?(\d{1}|\d{2}|\d{3})[- ]?)?\d{3}[- ]?\d{3}[- ]?\d{4}$/" id="phone" placeholder="Enter phone number">
+                  <div class="help-block" ng-messages="myform.phone.$error" ng-if="submitted || myform.phone.$touched || myForm.phone.$dirty">
+                      <p ng-message="pattern">Phone number is invalid.</p>
+                  </div>
+                </div>
+
+                <label>Gender</label>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label class="radio-inline"><input checked type="radio" name="sex">Male</label>
+                    </div>
+                    <div class="col-sm-6">
+                        <label class="radio-inline"><input type="radio" name="sex">Female</label>
+                    </div>
+                </div>
+                <!--
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input">
+                    I agree with terms and conditions
+                  </label>
+                </div>
+                <br>
+                -->
+                <div class="form-group">
+                    <button type="submit" ng-disabled="myform.$invalid" ng-click="register()" class="btn btn-primary btn-block">Register</button>
+                </div>
+
+        </div>
+    </form>
+    <br>
+    <p class="text-center">Already have account?<br><a ui-sref="login1">Click here</a> to Login</p>
+    <br>
+</div>
+<!-- End page content -->
+
+<script>
+    document.getElementById('birthday').valueAsDate = new Date();
+    console.log(document.getElementById('birthday').valueAsDate);
+</script>

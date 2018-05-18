@@ -1,0 +1,53 @@
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+<style>
+#menu-top {
+     display: none;
+}
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.clearfix:before, .clearfix:after, .dl-horizontal dd:before, .dl-horizontal dd:after, .container:before, .container:after, .container-fluid:before, .container-fluid:after, .row:before, .row:after, .form-horizontal .form-group:before, .form-horizontal .form-group:after, .btn-toolbar:before, .btn-toolbar:after, .btn-group-vertical > .btn-group:before, .btn-group-vertical > .btn-group:after, .nav:before, .nav:after, .navbar:before, .navbar:after, .navbar-header:before, .navbar-header:after, .navbar-collapse:before, .navbar-collapse:after, .pager:before, .pager:after, .panel-body:before, .panel-body:after, .modal-header:before, .modal-header:after, .modal-footer:before, .modal-footer:after {
+    display: table;
+    content: initial;
+}
+
+.navbar .menu-title {
+    font-size: 20px;
+}
+
+.btn {
+    font-size: 20px;
+}
+
+.navbar-toggler {
+    font-size: 20px;
+}
+
+.dropup, .dropdown {
+    position: fixed;
+}
+
+</style>
+<div ng-controller="DraggableEventsCtrl as vm">
+  <ng-include src="'templates/calendarControls.html'"></ng-include>
+  <mwl-calendar
+    events="vm.events"
+    view="vm.calendarView"
+    view-date="vm.viewDate"
+    cell-is-open="vm.cellIsOpen"
+    cell-auto-open-disabled="false"
+    on-timespan-click="vm.timespanClicked(calendarDate, calendarCell)"
+    on-event-times-changed="calendarEvent.startsAt = calendarNewEventStart; calendarEvent.endsAt = calendarNewEventEnd; vm.eventTimesChanged(calendarEvent)">
+  </mwl-calendar>
+</div>
+
+<div class="dropup floating-right">
+  <button ui-sref="scheduleOverview" type="button" class="btn btn-primary">
+      <i class="fa fa-file"></i>
+  </button>
+</div>

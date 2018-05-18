@@ -1,0 +1,86 @@
+/*! 
+Font awesome scss style sheet import
+*/
+@import '../vendor/fontawesome/scss/font-awesome';
+
+/*!
+ * Bootstrap v4.0.0-beta (https://getbootstrap.com)
+ * Copyright 2011-2017 The Bootstrap Authors
+ * Copyright 2011-2017 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+@import "../vendor/bootstrap4beta/scss/functions";
+@import "../vendor/bootstrap4beta/scss/variables";
+@import "../vendor/bootstrap4beta/scss/mixins";
+@import "../vendor/bootstrap4beta/scss/print";
+@import "../vendor/bootstrap4beta/scss/reboot";
+@import "../vendor/bootstrap4beta/scss/type";
+@import "../vendor/bootstrap4beta/scss/images";
+@import "../vendor/bootstrap4beta/scss/code";
+@import "../vendor/bootstrap4beta/scss/grid";
+@import "../vendor/bootstrap4beta/scss/tables";
+@import "../vendor/bootstrap4beta/scss/forms";
+@import "../vendor/bootstrap4beta/scss/buttons";
+@import "../vendor/bootstrap4beta/scss/transitions";
+@import "../vendor/bootstrap4beta/scss/dropdown";
+@import "../vendor/bootstrap4beta/scss/button-group";
+@import "../vendor/bootstrap4beta/scss/input-group";
+@import "../vendor/bootstrap4beta/scss/custom-forms";
+@import "../vendor/bootstrap4beta/scss/nav";
+@import "../vendor/bootstrap4beta/scss/navbar";
+@import "../vendor/bootstrap4beta/scss/card";
+@import "../vendor/bootstrap4beta/scss/breadcrumb";
+@import "../vendor/bootstrap4beta/scss/pagination";
+@import "../vendor/bootstrap4beta/scss/badge";
+@import "../vendor/bootstrap4beta/scss/jumbotron";
+@import "../vendor/bootstrap4beta/scss/alert";
+@import "../vendor/bootstrap4beta/scss/progress";
+@import "../vendor/bootstrap4beta/scss/media";
+@import "../vendor/bootstrap4beta/scss/list-group";
+@import "../vendor/bootstrap4beta/scss/close";
+@import "../vendor/bootstrap4beta/scss/modal";
+@import "../vendor/bootstrap4beta/scss/tooltip";
+@import "../vendor/bootstrap4beta/scss/popover";
+@import "../vendor/bootstrap4beta/scss/carousel";
+@import "../vendor/bootstrap4beta/scss/utilities";
+
+
+/*------------------------------------- Custome style.css -------------------------------------------------- */
+/*! 
+* Adminux (http://maxartkiller.com)
+* Copyright 2017 The Adminux Author: Maxartkiller
+* purchase licence before use
+* You can not resale or modify without prior licences. 
+*/
+
+/*------------------------------------------------------------------ 
+
+[Table of contents]
+1. Misc and variables
+2. Main-menu
+3. side-menu
+4. userprofile
+5. search-bar
+6. block-widget
+7. user-widget
+8. services-widget
+9. review-widget
+10. page title
+11. social
+12. mailbox
+13. Profile
+14. file explorer
+15. shopping
+16. sign in flow
+
+-------------------------------------------------------------------*/
+
+/* ---------------------- Misc and variables basic css ---------------------------- */
+
+/* Change below color codes to change theme */
+$background-color: #143122;
+$font-color:#ffffff;
+$border-color:rgba($font-color, 0.2);
+
+@import "custome-style";
